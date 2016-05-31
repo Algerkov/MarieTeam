@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AjoutBateau" >
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="30dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="38dp" />
+	
+    <TextView
+        android:id="@+id/textAcceuil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/welcome"
+        android:textSize="@dimen/Titre" />
+    
+    
+    <TextView
+        android:id="@+id/textNomBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textIdBat"
+        android:layout_marginTop="16dp"
+        android:text="@string/nomBateau" />
+
+    <TextView
+        android:id="@+id/textLongBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textNomBat"
+        android:layout_marginTop="15dp"
+        android:text="@string/longBateau" />
+
+    <TextView
+        android:id="@+id/textLargBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLongBat"
+        android:layout_marginTop="16dp"
+        android:text="@string/largBateau" />
+
+    <TextView
+        android:id="@+id/textLstEquip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textVitBat"
+        android:layout_marginTop="19dp"
+        android:text="@string/lstEquip" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxEquip1"
+        android:layout_alignBottom="@+id/checkBoxEquip1"
+        android:layout_alignEnd="@id/textAcceuil"
+        android:layout_marginEnd="19dp"
+        android:text="@string/equip4" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBoxEquip2"
+        android:layout_alignBottom="@+id/checkBoxEquip2"
+        android:layout_alignStart="@id/checkBoxEquip4"
+        android:text="@string/equip5" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkBoxEquip3"
+        android:layout_alignStart="@id/checkBoxEquip5"
+        android:text="@string/equip6" />
+
+    <EditText
+        android:id="@+id/EditIdBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textIdBat"
+        android:layout_alignTop="@+id/space1"
+        android:layout_toEndOf="@id/checkBoxEquip1"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/EditNomBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textLongBat"
+        android:layout_below="@+id/EditIdBat"
+        android:layout_toEndOf="@id/checkBoxEquip1"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/EditLongBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textLongBat"
+        android:layout_below="@+id/EditNomBat"
+        android:layout_toEndOf="@id/checkBoxEquip1"
+        android:ems="10"
+        android:inputType="text|numberDecimal" />
+
+    <EditText
+        android:id="@+id/EditLargBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textLargBat"
+        android:layout_below="@+id/EditLongBat"
+        android:layout_toEndOf="@id/checkBoxEquip1"
+        android:ems="10"
+        android:inputType="text|numberDecimal" />
+
+    <TextView
+        android:id="@+id/textVitBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textLstEquip"
+        android:layout_below="@+id/textLargBat"
+        android:layout_marginTop="15dp"
+        android:text="@string/vitBateau" />
+
+    <EditText
+        android:id="@+id/EditVitBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textVitBat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="false"
+        android:layout_below="@+id/EditLargBat"
+        android:layout_toEndOf="@id/checkBoxEquip1"
+        android:ems="10"
+        android:inputType="text|numberDecimal" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textLstEquip"
+        android:layout_below="@+id/textLstEquip"
+        android:layout_marginTop="16dp"
+        android:text="@string/equip1" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textLstEquip"
+        android:layout_below="@+id/checkBoxEquip1"
+        android:text="@string/equip2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEquip3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textLstEquip"
+        android:layout_below="@+id/checkBoxEquip2"
+        android:text="@string/equip3" />
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxEquip6"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/checkBoxEquip3"
+        android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/textIdBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textNomBat"
+        android:layout_below="@+id/textAcceuil"
+        android:layout_marginTop="26dp"
+        android:text="@string/idBat" />
+
+</RelativeLayout>

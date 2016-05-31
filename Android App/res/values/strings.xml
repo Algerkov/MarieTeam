@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MarieTeam</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="idBat">ID Bateau :</string>
+    <string name="nomBateau">Nom : </string>
+    <string name="longBateau">Longueur : </string>
+    <string name="largBateau">Largeur :</string>
+    <string name="vitBateau">Vitesse : </string>
+    <string name="lstEquip">Liste equipements :</string>
+    <string name="welcome">Ajouter un Bateau Voyageur :</string>
+    <string name="equip1">Accés Handicap</string>
+    <string name="equip3">Pont Promenade</string>
+    <string name="equip4">Salon Vid</string>
+    <string name="equip6">Salle de spectacle</string>
+    <string name="equip5">Piscine</string>
+    <string name="equip2">Bar</string>
+    <string name="submit">Valider</string>
+
+</resources>
