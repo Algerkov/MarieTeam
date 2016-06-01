@@ -49,8 +49,9 @@ public class AjoutBateau extends Activity implements View.OnTouchListener, View.
    // private static final String LOGIN_URL = "http://xxx.xxx.x.x:1234/webservice/register.php";
     
     //testing on Emulator:
-    private static final String LOGIN_URL = "http://lgb6-slam2-2016.net23.net/webservice/InsertionBateauV.php";
+    private static final String LOGIN_URL = "http://192.168.1.40/marie/webservice/InsertionBateauV.php";
     
+    // serveur distant : "http://lgb6-slam2-2016.net23.net/webservice/InsertionBateauV.php";
   //testing from a real server:
     //private static final String LOGIN_URL = "http://www.yourdomain.com/webservice/register.php";
     
@@ -120,25 +121,6 @@ public class AjoutBateau extends Activity implements View.OnTouchListener, View.
 		if (v.getId() == R.id.buttonValider){
 			
 			new CreateBoat().execute();
-			
-			/*ArrayList<Equipement> mesEquip= new ArrayList<Equipement>();
-			
-			Equipement E1 = new Equipement("1", "Accés Handicap");
-			Equipement E2 = new Equipement("2", "Bar");
-			Equipement E3 = new Equipement("3", "Pont Promenade");
-			Equipement E4 = new Equipement("4", "Salon Vid");
-			Equipement E5 = new Equipement("5", "Piscine");
-			Equipement E6 = new Equipement("6", "Salle de spectacle");
-			
-			if (checkBoxEquip1.isSelected()) mesEquip.add(E1);
-			if (checkBoxEquip2.isSelected()) mesEquip.add(E2);
-			if (checkBoxEquip3.isSelected()) mesEquip.add(E3);
-			if (checkBoxEquip4.isSelected()) mesEquip.add(E4);
-			if (checkBoxEquip5.isSelected()) mesEquip.add(E5);
-			if (checkBoxEquip6.isSelected()) mesEquip.add(E6);
-			
-			BateauVoyageur B = new BateauVoyageur(EditIdBat.getText().toString(), EditNomBat.getText().toString(), Double.parseDouble(EditLongBat.getText().toString()), Double.parseDouble(EditLargBat.getText().toString()), Double.parseDouble(EditVitBat.getText().toString()), EditIdBat.getText().toString(),  mesEquip);
-			*/
 		}
 		
 	}
@@ -180,6 +162,42 @@ public class AjoutBateau extends Activity implements View.OnTouchListener, View.
            try {
                // Building Parameters
                List<NameValuePair> params = new ArrayList<NameValuePair>();
+               
+               String equiper = new String();
+               
+               	if (checkBoxEquip1.isChecked()){
+               		equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				if (checkBoxEquip2.isChecked()){
+   					equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				if (checkBoxEquip3.isChecked()){
+   					equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				if (checkBoxEquip4.isChecked()){
+   					equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				if (checkBoxEquip5.isChecked()){
+   					equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				if (checkBoxEquip6.isChecked()){
+   					equiper+='1';
+               	}else {
+               		equiper+='0';
+               	}
+   				
+   				params.add(new BasicNameValuePair("equiper", equiper));
+               
                params.add(new BasicNameValuePair("idBat", idBat));
                params.add(new BasicNameValuePair("nomBat", nomBat));
                params.add(new BasicNameValuePair("largBat", largBat));

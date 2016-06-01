@@ -38,7 +38,7 @@ public class Login extends Activity implements OnClickListener{
     //php login script location:
     
     //testing on Emulator:
-    private static final String LOGIN_URL = "http://lgb6-slam2-2016.net23.net/webservice/login.php";
+    private static final String LOGIN_URL = "http://192.168.1.40/marie/webservice/login.php";
     
   //testing from a real server:
     
